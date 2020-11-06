@@ -12,7 +12,7 @@ router.get('/test', (req, res) => { res.status(200).json({message: 'server runni
 // @desc			Get all names
 // @route			GET /
 router.get('/', (req, res) => {   
-    Project.findName()
+    Project.getAll()
     .then((projects) => {
         res.status(200).json(projects)
     })
